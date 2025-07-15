@@ -45,4 +45,33 @@
         margin-bottom: 20px;
     }
 }
+.image-container img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    cursor: zoom-in;
+}
+
+.quantity-selector {
+    margin: 10px 0;
+}
+
+.quantity-selector button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.variations {
+    margin: 10px 0;
+}
+
+.feedback {
+    color: green;
+    margin-top: 10px;
+}
+
+/* Zoom effect is handled via JS but we can define fallback */
+#product-image {
+    transition: transform 0.3s ease;
+}
 
