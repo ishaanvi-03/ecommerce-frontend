@@ -1,0 +1,41 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(135deg, #ff6b6b, #ffb347);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Example Products Section */
+#products {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
