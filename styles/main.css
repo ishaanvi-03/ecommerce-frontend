@@ -135,4 +135,51 @@
         gap: 10px;
     }
 }
+.auth-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.password-field {
+    display: flex;
+}
+
+.password-field input {
+    flex: 1;
+}
+
+.password-field button {
+    margin-left: 5px;
+}
+
+small {
+    color: #555;
+}
+
+.auth-container button {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .auth-container {
+        width: 90%;
+    }
+}
 
