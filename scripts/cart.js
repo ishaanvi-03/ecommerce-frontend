@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        document.getElementById('cart-count').textContent = cart.length;
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const cartCountElement = document.getElementById('cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+        }
     }
 });
+<script src="scripts/cart.js"></script>
