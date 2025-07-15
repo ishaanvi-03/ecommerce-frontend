@@ -28,20 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    function displayProducts(products) {
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.classList.add('product-card');
+function displayProducts(products) {
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.classList.add('product-card');
 
-            card.innerHTML = `
+        card.innerHTML = `
+            <a href="product.html?id=${product.id}">
                 <img src="${product.image}" alt="${product.title}" loading="lazy">
                 <h3 class="product-title">${product.title}</h3>
-                <p class="product-price">$${product.price.toFixed(2)}</p>
-                <p class="product-description">${product.description.substring(0, 80)}...</p>
-                <button class="add-to-cart">Add to Cart</button>
-            `;
+            </a>
+            <p class="product-price">$${product.price.toFixed(2)}</p>
+            <button class="add-to-cart">Add to Cart</button>
+        `;
 
-            productGrid.appendChild(card);
-        });
-    }
+        productGrid.appendChild(card);
+    });
+}
+
 });
