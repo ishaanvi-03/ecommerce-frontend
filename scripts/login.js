@@ -28,3 +28,18 @@ document.getElementById('login-form').addEventListener('submit', e => {
 function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
+document.getElementById('login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert("Login successful!");
+            window.location.href = 'index.html';  // Redirect to homepage or dashboard
+        })
+        .catch((error) => {
+            alert("Login failed: " + error.message);
+        });
+});

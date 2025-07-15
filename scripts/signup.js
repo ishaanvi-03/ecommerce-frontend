@@ -35,3 +35,18 @@ function validateEmail(email) {
 function validatePassword(password) {
     return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
 }
+document.getElementById('signup-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert("Signup successful!");
+            window.location.href = 'login.html';
+        })
+        .catch((error) => {
+            alert("Error: " + error.message);
+        });
+});

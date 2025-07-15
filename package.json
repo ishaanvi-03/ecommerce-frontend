@@ -16,5 +16,8 @@
     "url": "https://github.com/ishaanvi-03/ecommerce-frontend/issues"
   },
   "homepage": "https://github.com/ishaanvi-03/ecommerce-frontend#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "firebase": "^11.10.0"
+  }
 }
