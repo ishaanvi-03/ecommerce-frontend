@@ -16,6 +16,17 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.error {
+    color: red;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -68,7 +79,7 @@ body {
     background-color: #0056b3;
 }
 
-/* Responsive Breakpoints */
+/* Responsive Design */
 @media (max-width: 992px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
